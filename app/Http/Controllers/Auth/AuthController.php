@@ -68,6 +68,6 @@ class AuthController extends Controller
         $user->password = Hash::make($req['password']);
         $user->save();
 
-        return $this->success(null, 'User created successfully');
+        return $this->success(null, 'Register successfully');
     }
 }
