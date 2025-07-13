@@ -16,7 +16,7 @@ class AuthController extends Controller
         $req = $request->validated();
 
         if (!Auth::attempt($req)) {
-            return $this->error('Unauthorized', 401);
+            return $this->error('Invalid credentials', 401);
         }
 
         $user = Auth::user();
